@@ -1,14 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import products from "../products";
 
-const products = [
-  { img: "TV Unit in Classic Walnut Finish.jpg", name: "TV Unit in Classic Walnut Finish", price: "$299" },
-  { img: "TV Unit in Classic Walnut Finish.jpg", name: "Metal Book Stand", price: "$49" },
-  { img: "TV Unit in Classic Walnut Finish.jpg", name: "Scented Candle", price: "$19" },
-  { img: "TV Unit in Classic Walnut Finish.jpg", name: "Sculptural Vase", price: "$79" },
-  { img: "TV Unit in Classic Walnut Finish.jpg", name: "2-Pack Spiral Candles", price: "$25" },
-  { img: "TV Unit in Classic Walnut Finish.jpg", name: "Wooden Tray Set", price: "$45" },
-];
+
 
 const ShopContainer = styled.div`
   margin: auto;
@@ -32,14 +26,16 @@ const ProductGrid = styled.div`
   justify-content: center;
 `;
 
-const ProductCard = styled.div`
+const ProductCard = styled.a`
   background: #fff8f0;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   text-align: center;
-
+  text-decoration: none;
+  color: inherit;
+  
   &:hover {
     transform: translateY(-5px);
   }
@@ -76,8 +72,8 @@ const Shop = () => {
       <Title>Discover Elegant Home Decor</Title>
       <ProductGrid>
         {products.map((product, index) => (
-          <ProductCard key={index}>
-            <img src={product.img} alt={product.name} />
+          <ProductCard href={product.link} target="_blank" rel="noopener noreferrer" key={index}>
+            <img src={product.image} alt={product.name} />
             <p>{product.name}</p>
             <span>{product.price}</span>
           </ProductCard>
