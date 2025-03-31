@@ -1,54 +1,30 @@
-// import React from "react";
-// import styled from "styled-components";
-
-// const HeroSection = styled.section`
-//   width: 100%;
-//   text-align: center;
-//   background: #f4f4f4;
-//   padding: 30px 0;
-// `;
-
-// const HeroImage = styled.img`
-//   width: 90%;
-//   max-width: 1000px;
-//   border-radius: 10px;
-// `;
-
-// const Hero = () => {
-//   return (
-//     <HeroSection>
-//       <HeroImage src="/banner.jpg" alt="Hero Banner" />
-//     </HeroSection>
-//   );
-// };
-
-// export default Hero;
-
-
 import React from "react";
 import styled from "styled-components";
 
 const HeroSection = styled.section`
   width: 100%;
   text-align: center;
-  background: #f4f4f4;
-  padding: 30px 0;
+  background: #f8f1e4; /* Warm and cozy background */
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding: 20px;
 `;
 
 const HeroImage = styled.img`
   width: 100%;
-  max-width: 1000px;
-  height: auto;
+  height: auto; /* Adjusts height dynamically */
+  max-height: 90vh; /* Ensures it fits within the viewport */
+  object-fit: contain; /* Ensures full image visibility */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  object-fit: contain; /* Ensures the full banner is visible */
 `;
 
 const Hero = () => {
   return (
     <HeroSection>
-      <HeroImage src="/banner.jpg" alt="Hero Banner" />
+      <HeroImage src="/banner.png" alt="Beautiful Home Decor Banner" />
     </HeroSection>
   );
 };

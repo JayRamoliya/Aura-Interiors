@@ -5,39 +5,47 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background: white;
-  border-bottom: 1px solid #ddd;
+  padding: 20px 40px;
+  background: #f8f1e4; /* Soft warm background */
+  border-bottom: 2px solid #d3b897;
+  font-family: "Georgia", serif;
 `;
 
 const Logo = styled.h1`
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  color: #333;
+  color: #5a4636;
+  letter-spacing: 1px;
 `;
 
 const Nav = styled.nav`
   display: flex;
-  gap: 20px;
+  gap: 30px;
 `;
 
 const NavItem = styled.a`
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: #5a4636;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+  
   &:hover {
-    color: #007bff;
+    color: #a67b5b;
+    text-decoration: underline;
   }
 `;
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo>ShopMate</Logo>
+      <Logo>Aura Interiors</Logo>
       <Nav>
-        <NavItem href="#">All Departments</NavItem>
-        <NavItem href="#">Toys & Crafts</NavItem>
-        <NavItem href="#">Kitchen & Home</NavItem>
+        <NavItem href="#">Furniture</NavItem>
+        <NavItem href="/shop">Shop</NavItem>
+        <NavItem href="#">Lighting</NavItem>
+        <NavItem href="#">Decor Accents</NavItem>
+        <NavItem href="#">Tableware</NavItem>
       </Nav>
     </HeaderContainer>
   );
