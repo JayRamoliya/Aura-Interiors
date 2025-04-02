@@ -173,10 +173,10 @@ const Header = () => {
             <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
               <li><a href="/" className="text-primary font-medium">Home</a></li>
               <li><a href="/shop" className="text-gray-600 hover:text-primary">Shop</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Decor</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Lighting</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Textiles</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Kitchen</a></li>
+              <li><a href="/shop/room" className="text-gray-600 hover:text-primary">Room</a></li>
+              <li><a href="/shop/bedroom" className="text-gray-600 hover:text-primary">BedRoom</a></li>
+              <li><a href="/shop/ledwallart" className="text-gray-600 hover:text-primary">LED Wall Art</a></li>
+              <li><a href="/shop/kitchen" className="text-gray-600 hover:text-primary">Kitchen</a></li>
               {/* <li><a href="#" className="text-gray-600 hover:text-primary">Bathroom</a></li>
               <li><a href="#" className="text-gray-600 hover:text-primary">Outdoor</a></li>
               <li><a href="#" className="text-gray-600 hover:text-primary">Sale</a></li> */}
