@@ -100,7 +100,7 @@ const products = [
       id: 12, 
       name: "LED Wall Acrylic Flower Ganesh Light 4 Action", 
       category: "Wall Decor", 
-      price: "1,050", 
+      price: "₹1,050", 
       image: "/wall decor/2.jpg", 
       link: "https://amzn.to/43CKPnE" 
     },
@@ -108,7 +108,7 @@ const products = [
       id: 13, 
       name: "Lamp master Flower Ganpati LED Wall Light", 
       category: "Wall Decor", 
-      price: "1,209", 
+      price: "₹1,209", 
       image: "/wall decor/3.jpg", 
       link: "https://amzn.to/4kEbMxk" 
     },
@@ -116,7 +116,7 @@ const products = [
       id: 14, 
       name: "Lamp master Flower Om LED Wall Light", 
       category: "Wall Decor", 
-      price: "1,109", 
+      price: "₹1,109", 
       image: "/wall decor/4.jpg", 
       link: "https://amzn.to/4jI6OhM" 
     },
@@ -124,7 +124,7 @@ const products = [
       id: 15, 
       name: "Lamp master acrylic Peacock Wall Light Home Decorative Lights", 
       category: "Wall Decor", 
-      price: "1,009", 
+      price: "₹1,009", 
       image: "/wall decor/5.jpg", 
       link: "https://amzn.to/3HvBWDG" 
     },
@@ -132,7 +132,7 @@ const products = [
       id: 16, 
       name: "ATORSE Dried Flower Bouquet for Vase Floral", 
       category: "Wall Decor", 
-      price: "802", 
+      price: "₹802", 
       image: "/wall decor/6.jpg", 
       link: "https://amzn.to/4l17wI2" 
     },
@@ -140,17 +140,49 @@ const products = [
       id: 17, 
       name: "LASER ART Ethereal Hanuman LED Backlit Table Lamp", 
       category: "Wall Decor", 
-      price: "832", 
+      price: "₹832", 
       image: "/wall decor/7.jpg", 
       link: "https://amzn.to/4kY3wrM" 
     },
     { 
       id: 18, 
-      name: "Luteti Moving Sand Art Table Lamp,", 
+      name: "Luteti Moving Sand Art Table Lamp", 
       category: "Wall Decor", 
-      price: "1,199", 
+      price: "₹1,199", 
       image: "/wall decor/8.jpg", 
       link: "https://amzn.to/4koxc16" 
+    },
+    { 
+      id: 19, 
+      name: "ATORSE Wall Clock Easy to Read Decorative Wall Decor", 
+      category: "Wall Decor", 
+      price: "₹4,568", 
+      image: "/wall decor/9.jpg", 
+      link: "https://amzn.to/3ZmM33S" 
+    },
+    { 
+      id: 20, 
+      name: "Lamper Fanora Peacock Design Wall Light for Home Decor", 
+      category: "Wall Decor", 
+      price: "₹944", 
+      image: "/wall decor/10.jpg", 
+      link: "https://amzn.to/4mSELyZ" 
+    },
+    { 
+      id: 21, 
+      name: "VAH- Kya Bat Hai !! Ganeshji Wall Lamps for Home Decoration", 
+      category: "Wall Decor", 
+      price: "₹701", 
+      image: "/wall decor/11.jpg", 
+      link: "https://amzn.to/3TgBD26" 
+    },
+    { 
+      id: 22, 
+      name: "Smartway -18Watt Wall led Lamp Tree Branch", 
+      category: "Wall Decor", 
+      price: "₹791", 
+      image: "/wall decor/12.jpg", 
+      link: "https://amzn.to/45dkC02" 
     },
   ];
 
