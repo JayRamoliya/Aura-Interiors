@@ -1,108 +1,34 @@
-// import React from "react";
-// import styled from "styled-components";
-// import products from "../products";
 
 
-
-// const ShopContainer = styled.div`
-//   margin: auto;
-//   padding: 50px 20px;
-//   text-align: center;
-//   background: #f8f1e4;
-// `;
-
-// const Title = styled.h1`
-//   font-size: 32px;
-//   font-weight: bold;
-//   color: #5a4636;
-//   font-family: "Georgia", serif;
-//   margin-bottom: 30px;
-// `;
-
-// const ProductGrid = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-//   gap: 30px;
-//   justify-content: center;
-// `;
-
-// const ProductCard = styled.a`
-//   background: #fff8f0;
-//   padding: 20px;
-//   border-radius: 12px;
-//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-//   transition: transform 0.3s ease-in-out;
-//   text-align: center;
-//   text-decoration: none;
-//   color: inherit;
-
-//   &:hover {
-//     transform: translateY(-5px);
-//   }
-
-//   img {
-//     width: 220px;
-//     height: 220px;
-//     max-width: 100%;
-//     border-radius: 10px;
-//     object-fit: cover;
-//     border: 2px solid #d3b897;
-//   }
-
-//   p {
-//     font-size: 18px;
-//     margin-top: 10px;
-//     font-weight: bold;
-//     color: #5a4636;
-//     font-family: "Georgia", serif;
-//   }
-
-//   span {
-//     display: block;
-//     margin-top: 5px;
-//     font-size: 16px;
-//     color: #a67b5b;
-//     font-weight: 600;
-//   }
-// `;
-
-// const Shop = () => {
-//   return (
-//     <ShopContainer>
-//       <Title>Discover Elegant Home Decor</Title>
-//       <ProductGrid>
-//         {products.map((product, index) => (
-//           <ProductCard href={product.link} target="_blank" rel="noopener noreferrer" key={index}>
-//             <img src={product.image} alt={product.name} />
-//             <p>{product.name}</p>
-//             <span>{product.price}</span>
-//           </ProductCard>
-//         ))}
-//       </ProductGrid>
-//     </ShopContainer>
-//   );
-// };
-
-// export default Shop;
-
-
-
-
-
-
-
-
-import React from "react";
+import React, { useState } from "react";
 import products from "../products";
 
 const Shop = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 8;
+
+  // Calculate total pages
+  const totalPages = Math.ceil(products.length / productsPerPage);
+
+  // Get current page products
+  const indexOfLast = currentPage * productsPerPage;
+  const indexOfFirst = indexOfLast - productsPerPage;
+  const currentProducts = products.slice(indexOfFirst, indexOfLast);
+
+  // Change page
+  const goToPage = (pageNumber) => setCurrentPage(pageNumber);
+  const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+  const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
+
   return (
     <div className="mx-auto py-12 px-5 text-center bg-[#e3f2fd]">
       <h1 className="text-2xl sm:text-3xl font-bold text-[#0d47a1] font-serif mb-8">
         Discover Elegant Home Decor
       </h1>
+
+      {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
-        {products.map((product, index) => (
+        {currentProducts.map((product, index) => (
           <a
             href={product.link}
             target="_blank"
@@ -119,6 +45,39 @@ const Shop = () => {
             <span className="block mt-2 text-base text-[#1565c0] font-semibold">{product.price}</span>
           </a>
         ))}
+      </div>
+
+      {/* Pagination Controls */}
+      <div className="mt-10 flex justify-center items-center gap-2">
+        <button
+          onClick={prevPage}
+          disabled={currentPage === 1}
+          className="px-3 py-1 bg-[#90caf9] text-[#0d47a1] rounded hover:bg-[#64b5f6] disabled:opacity-50"
+        >
+          Prev
+        </button>
+
+        {[...Array(totalPages)].map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goToPage(i + 1)}
+            className={`px-3 py-1 rounded ${
+              currentPage === i + 1
+                ? "bg-[#1976d2] text-white"
+                : "bg-[#bbdefb] text-[#0d47a1] hover:bg-[#90caf9]"
+            }`}
+          >
+            {i + 1}
+          </button>
+        ))}
+
+        <button
+          onClick={nextPage}
+          disabled={currentPage === totalPages}
+          className="px-3 py-1 bg-[#90caf9] text-[#0d47a1] rounded hover:bg-[#64b5f6] disabled:opacity-50"
+        >
+          Next
+        </button>
       </div>
     </div>
   );

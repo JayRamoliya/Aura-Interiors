@@ -1,86 +1,8 @@
-// import React from 'react';
-
-// const CategorySection = () => {
-//   const categories = [
-//     { icon: 'ri-sofa-line', label: 'Living Room' },
-//     { icon: 'ri-hotel-bed-line', label: 'Bedroom' },
-//     { icon: 'ri-restaurant-line', label: 'Dining' },
-//     { icon: 'ri-home-office-line', label: 'Office' },
-//     { icon: 'ri-door-open-line', label: 'Outdoor' },
-//     { icon: 'ri-lightbulb-line', label: 'Lighting' },
-//     { icon: 'ri-plant-line', label: 'Plants' },
-//     { icon: 'ri-gift-line', label: 'Gifts' },
-//   ];
-
-//   return (
-//     <section className="bg-white py-8 shadow-sm">
-//       <div className="container mx-auto px-4">
-//         <div className="flex justify-between items-center flex-wrap">
-//           {categories.map((category, index) => (
-//             <a
-//               href="#"
-//               key={index}
-//               className="flex flex-col items-center p-4 transition-all hover:text-primary"
-//             >
-//               <div className="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-2">
-//                 <i className={`${category.icon} ri-lg text-primary`}></i>
-//               </div>
-//               <span className="text-sm font-medium">{category.label}</span>
-//             </a>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default CategorySection;
-
-
-
-// import React from 'react';
-
-// const CategorySection = () => {
-//   const categories = [
-//     { icon: 'ri-sofa-line', label: 'Living Room' },
-//     { icon: 'ri-hotel-bed-line', label: 'Bedroom' },
-//     { icon: 'ri-restaurant-line', label: 'Dining' },
-//     { icon: 'ri-home-office-line', label: 'Office' },
-//     { icon: 'ri-door-open-line', label: 'Outdoor' },
-//     { icon: 'ri-lightbulb-line', label: 'Lighting' },
-//     { icon: 'ri-plant-line', label: 'Plants' },
-//     { icon: 'ri-gift-line', label: 'Gifts' },
-//   ];
-
-//   return (
-//     <section className="bg-white py-8 shadow-sm">
-//       <div className="container mx-auto px-4">
-//         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 text-center">
-//           {categories.map((category, index) => (
-//             <a
-//               href="#"
-//               key={index}
-//               className="flex flex-col items-center p-4 transition-all hover:text-primary"
-//             >
-//               <div className="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-2">
-//                 <i className={`${category.icon} ri-lg text-primary`}></i>
-//               </div>
-//               <span className="text-sm font-medium">{category.label}</span>
-//             </a>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default CategorySection;
-
 
 
 
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Link } from 'react-router-dom';
 
 const CategorySection = () => {
   const categories = [
@@ -95,19 +17,20 @@ const CategorySection = () => {
   ];
 
   return (
-    <section className="bg-white py-8 shadow-sm">
+    <section className="bg-gray-50 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 text-center">
+        <h2 className="text-2xl font-semibold mb-8 text-center text-gray-800">Shop by Category</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6">
           {categories.map((category, index) => (
             <Link
-              to={`/shop/${category.link}`} // Link to the CategoryShop with the category slug
+              to={`/shop/${category.link}`}
               key={index}
-              className="flex flex-col items-center p-4 transition-all hover:text-primary"
+              className="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
             >
-              <div className="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-full mb-2">
-                <i className={`${category.icon} ri-lg text-primary`}></i>
+              <div className="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-3 shadow-inner">
+                <i className={`${category.icon} ri-xl`}></i>
               </div>
-              <span className="text-sm font-medium">{category.label}</span>
+              <span className="text-sm font-medium text-gray-700">{category.label}</span>
             </Link>
           ))}
         </div>
