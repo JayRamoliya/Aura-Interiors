@@ -184,6 +184,30 @@ const products = [
       image: "/wall decor/12.jpg", 
       link: "https://amzn.to/45dkC02" 
     },
+    { 
+      id: 23, 
+      name: "Light Up Cherry Blossom Tree Lights With 48 LED", 
+      category: "Light Decor", 
+      price: "₹491", 
+      image: "/light decor/1.jpg", 
+      link: "https://amzn.to/43FwiYh" 
+    },
+    { 
+      id: 24, 
+      name: "Boho Wall Art , Minimalist Wall Art", 
+      category: "Wall Decor", 
+      price: "₹491", 
+      image: "/wall decor/13.jpg", 
+      link: "https://amzn.to/3ZQdfZ5" 
+    },
+    { 
+      id: 25, 
+      name: "Zzudis Set of 6 Minimalist Abstract Art Print Poster", 
+      category: "Wall Decor", 
+      price: "₹591", 
+      image: "/wall decor/14.jpg", 
+      link: "https://amzn.to/4kAoLQn" 
+    },
   ];
 
   
